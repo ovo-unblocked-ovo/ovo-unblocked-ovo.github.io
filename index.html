@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="https://schema.org/WebSite">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     <title>OVO Unblocked - Play OvO Game Free Online</title>
     <meta name="description" content="Play OvO Unblocked free online! Enjoy the popular platform game OvO without restrictions. Try OvO 2 and OvO Game Unblocked - play anytime, anywhere!" />
     <meta name="keywords" content="ovo unblocked, ovo game unblocked, unblocked ovo, ovo unblocked games, wtf unblocked ovo, play ovo online, ovo platform game" />
@@ -14,6 +14,11 @@
     <link rel="icon" href="/O.png" />
     <link rel="canonical" href="https://ovo-unblocked-ovo.github.io/" />
     <link rel="alternate" type="application/rss+xml" title="OVO Unblocked RSS" href="/feed.xml" />
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.youtube.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     
     <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css" />
@@ -58,21 +63,27 @@
       "@type": "Organization",
       "name": "OVO Unblocked",
       "url": "https://ovo-unblocked-ovo.github.io/",
-      "logo": "https://ovo-unblocked-ovo.github.io/OVOUNBLOCKED.png"
+      "logo": "https://ovo-unblocked-ovo.github.io/OVOUNBLOCKED.png",
+      "sameAs": []
     }
     </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://ovo-unblocked-ovo.github.io/"
-        }
-      ]
+      "@type": "CollectionPage",
+      "name": "OVO Unblocked - Free Online Games",
+      "description": "Collection of unblocked games including OvO, Vex series, and more popular online games.",
+      "url": "https://ovo-unblocked-ovo.github.io/",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "OvO Unblocked", "url": "https://ovo-unblocked-ovo.github.io/ovo/index.html"},
+          {"@type": "ListItem", "position": 2, "name": "OvO 2 Unblocked", "url": "https://ovo-unblocked-ovo.github.io/ovo2/index.html"},
+          {"@type": "ListItem", "position": 3, "name": "Vex 7 Unblocked", "url": "https://ovo-unblocked-ovo.github.io/vex-7/index.html"},
+          {"@type": "ListItem", "position": 4, "name": "Vex 8 Unblocked", "url": "https://ovo-unblocked-ovo.github.io/vex-8/index.html"},
+          {"@type": "ListItem", "position": 5, "name": "Vex X3M Unblocked", "url": "https://ovo-unblocked-ovo.github.io/vex-x3m/index.html"}
+        ]
+      }
     }
     </script>
     <script type="application/ld+json">
@@ -91,7 +102,7 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-P4EX4ZRLS2"
     ></script>
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js" defer></script>
   </head>
   <body>
     <div class="main-container">
@@ -180,21 +191,23 @@
 
         <div class="games-grid">
           <!-- Game Card 1 -->
-          <div class="game-card">
+          <article class="game-card" itemscope itemtype="https://schema.org/VideoGame">
             <div class="game-preview">
-              <img src="/ovo/images/icon-256.png" alt="OvO Unblocked - Play OvO game unblocked free online" />
-              <a href="/ovo/index.html" class="play-button">Play Now</a>
+              <img src="/ovo/images/icon-256.png" alt="OvO Unblocked - Play OvO game unblocked free online" loading="lazy" />
+              <div class="play-button" onclick="openGameModal('/ovo/index.html', 'OvO Unblocked')" style="cursor: pointer;" role="button" aria-label="Play OvO Unblocked">Play Now</div>
             </div>
             <div class="game-details">
-              <h3>OvO Unblocked</h3>
-              <p>Click to play</p>
+              <h3 itemprop="name">OvO Unblocked</h3>
+              <p itemprop="description">Click to play</p>
+              <meta itemprop="gamePlatform" content="Browser" />
+              <meta itemprop="applicationCategory" content="Game" />
             </div>
-          </div>
+          </article>
           <!-- Game Card 2 -->
           <div class="game-card">
             <div class="game-preview">
-              <img src="/ovo2/logo.png" alt="OvO 2 Unblocked - Play OvO 2 game unblocked" />
-              <a href="/ovo2/index.html" class="play-button">Play Now</a>
+              <img src="/ovo2/logo.png" alt="OvO 2 Unblocked - Play OvO 2 game unblocked" loading="lazy" />
+              <div class="play-button" onclick="openGameModal('/ovo2/index.html', 'OvO 2 Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>OvO 2 Unblocked</h3>
@@ -204,10 +217,8 @@
           <!-- Game Card 3 -->
           <div class="game-card">
             <div class="game-preview">
-              <img src="/archery-ragdoll/logo.png" alt="Archery Ragdoll Unblocked - Free online archery game" />
-              <a href="/archery-ragdoll/index.html" class="play-button"
-                >Play Now</a
-              >
+              <img src="/archery-ragdoll/logo.png" alt="Archery Ragdoll Unblocked - Free online archery game" loading="lazy" />
+              <div class="play-button" onclick="openGameModal('/archery-ragdoll/index.html', 'Archery Ragdoll Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Archery Ragdoll Unblocked</h3>
@@ -217,8 +228,8 @@
           <!-- Game Card 4 -->
           <div class="game-card">
             <div class="game-preview">
-              <img src="/car-fighter/logo.png" alt="Car Fighter Unblocked - Free online car fighting game" />
-              <a href="/car-fighter/index.html" class="play-button">Play Now</a>
+              <img src="/car-fighter/logo.png" alt="Car Fighter Unblocked - Free online car fighting game" loading="lazy" />
+              <div class="play-button" onclick="openGameModal('/car-fighter/index.html', 'Car Fighter Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Car Fighter Unblocked</h3>
@@ -228,8 +239,8 @@
           <!-- Game Card 5 -->
           <div class="game-card">
             <div class="game-preview">
-              <img src="/crazy-van/logo.png" alt="Crazy Van Unblocked - Play crazy van driving game" />
-              <a href="/crazy-van/index.html" class="play-button">Play Now</a>
+              <img src="/crazy-van/logo.png" alt="Crazy Van Unblocked - Play crazy van driving game" loading="lazy" />
+              <div class="play-button" onclick="openGameModal('/crazy-van/index.html', 'Crazy Van Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Crazy Van Unblocked</h3>
@@ -242,10 +253,9 @@
               <img
                 src="/football-penalty/logo.png"
                 alt="Football Penalty Unblocked - Free soccer penalty game"
+                loading="lazy"
               />
-              <a href="/football-penalty/index.html" class="play-button"
-                >Play Now</a
-              >
+              <div class="play-button" onclick="openGameModal('/football-penalty/index.html', 'Football Penalty Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Football Penalty Unblocked</h3>
@@ -258,12 +268,9 @@
               <img
                 src="/friday-night-funki-big-brother/logo.png"
                 alt="Friday Night Funki Big Brother Unblocked - Music rhythm game"
+                loading="lazy"
               />
-              <a
-                href="/friday-night-funki-big-brother/index.html"
-                class="play-button"
-                >Play Now</a
-              >
+              <div class="play-button" onclick="openGameModal('/friday-night-funki-big-brother/index.html', 'Friday Night Funki Big Brother Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Friday Night Funki Big Brother Unblocked</h3>
@@ -276,12 +283,9 @@
               <img
                 src="/friday-night-funkin-hugie-wugie/logo.png"
                 alt="Friday Night Funkin Hugie Wugie Unblocked - Free rhythm game"
+                loading="lazy"
               />
-              <a
-                href="/friday-night-funkin-hugie-wugie/index.html"
-                class="play-button"
-                >Play Now</a
-              >
+              <div class="play-button" onclick="openGameModal('/friday-night-funkin-hugie-wugie/index.html', 'Friday Night Funkin Hugie Wugie Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Friday Night Funkin Hugie Wugie Unblocked</h3>
@@ -291,8 +295,8 @@
           <!-- Game Card 9 -->
           <div class="game-card">
             <div class="game-preview">
-              <img src="/giant-rush/logo.png" alt="Giant Rush Unblocked - Fast-paced action game" />
-              <a href="/giant-rush/index.html" class="play-button">Play Now</a>
+              <img src="/giant-rush/logo.png" alt="Giant Rush Unblocked - Fast-paced action game" loading="lazy" />
+              <div class="play-button" onclick="openGameModal('/giant-rush/index.html', 'Giant Rush Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Giant Rush Unblocked</h3>
@@ -302,10 +306,8 @@
           <!-- Game Card 10 -->
           <div class="game-card">
             <div class="game-preview">
-              <img src="/grow-wars.io/logo.png" alt="Grow Wars.io Unblocked - IO strategy game" />
-              <a href="/grow-wars.io/index.html" class="play-button"
-                >Play Now</a
-              >
+              <img src="/grow-wars.io/logo.png" alt="Grow Wars.io Unblocked - IO strategy game" loading="lazy" />
+              <div class="play-button" onclick="openGameModal('/grow-wars.io/index.html', 'Grow Wars.io Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Grow Wars.io Unblocked</h3>
@@ -315,8 +317,8 @@
           <!-- Game Card 11 -->
           <div class="game-card">
             <div class="game-preview">
-              <img src="/motor-tour/logo.png" alt="Motor Tour Unblocked - Motorcycle racing game" />
-              <a href="/motor-tour/index.html" class="play-button">Play Now</a>
+              <img src="/motor-tour/logo.png" alt="Motor Tour Unblocked - Motorcycle racing game" loading="lazy" />
+              <div class="play-button" onclick="openGameModal('/motor-tour/index.html', 'Motor Tour Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Motor Tour Unblocked</h3>
@@ -326,8 +328,8 @@
           <!-- Game Card 12 -->
           <div class="game-card">
             <div class="game-preview">
-              <img src="/sprunki/logo.png" alt="Sprunki Unblocked - Free platform game" />
-              <a href="/sprunki/index.html" class="play-button">Play Now</a>
+              <img src="/sprunki/logo.png" alt="Sprunki Unblocked - Free platform game" loading="lazy" />
+              <div class="play-button" onclick="openGameModal('/sprunki/index.html', 'Sprunki Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Sprunki Unblocked</h3>
@@ -340,10 +342,9 @@
               <img
                 src="/sprunki-challenge/logo.png"
                 alt="Sprunki Challenge Unblocked - Challenging platform game"
+                loading="lazy"
               />
-              <a href="/sprunki-challenge/index.html" class="play-button"
-                >Play Now</a
-              >
+              <div class="play-button" onclick="openGameModal('/sprunki-challenge/index.html', 'Sprunki Challenge Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Sprunki Challenge Unblocked</h3>
@@ -356,12 +357,9 @@
               <img
                 src="/sprunki-find-the-differences/logo.png"
                 alt="Sprunki Find The Differences Unblocked - Spot the difference game"
+                loading="lazy"
               />
-              <a
-                href="/sprunki-find-the-differences/index.html"
-                class="play-button"
-                >Play Now</a
-              >
+              <div class="play-button" onclick="openGameModal('/sprunki-find-the-differences/index.html', 'Sprunki Find The Differences Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Sprunki Find The Differences Unblocked</h3>
@@ -374,10 +372,9 @@
               <img
                 src="/super-sprunki-clicker/logo.png"
                 alt="Super Sprunki Clicker Unblocked - Idle clicker game"
+                loading="lazy"
               />
-              <a href="/super-sprunki-clicker/index.html" class="play-button"
-                >Play Now</a
-              >
+              <div class="play-button" onclick="openGameModal('/super-sprunki-clicker/index.html', 'Super Sprunki Clicker Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Super Sprunki Clicker Unblocked</h3>
@@ -387,10 +384,8 @@
           <!-- Game Card 16 -->
           <div class="game-card">
             <div class="game-preview">
-              <img src="/tug-of-heads/logo.png" alt="Tug Of Heads Unblocked - Physics-based tug of war game" />
-              <a href="/tug-of-heads/index.html" class="play-button"
-                >Play Now</a
-              >
+              <img src="/tug-of-heads/logo.png" alt="Tug Of Heads Unblocked - Physics-based tug of war game" loading="lazy" />
+              <div class="play-button" onclick="openGameModal('/tug-of-heads/index.html', 'Tug Of Heads Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Tug Of Heads Unblocked</h3>
@@ -400,8 +395,8 @@
           <!-- Game Card 17 -->
           <div class="game-card">
             <div class="game-preview">
-              <img src="/vex-7/logo.png" alt="Vex 7 Unblocked - Ultimate platform game challenge" />
-              <a href="/vex-7/index.html" class="play-button">Play Now</a>
+              <img src="/vex-7/logo.png" alt="Vex 7 Unblocked - Ultimate platform game challenge" loading="lazy" />
+              <div class="play-button" onclick="openGameModal('/vex-7/index.html', 'Vex 7 Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Vex 7 Unblocked</h3>
@@ -411,8 +406,8 @@
           <!-- Game Card 18 -->
           <div class="game-card">
             <div class="game-preview">
-              <img src="/vex-8/logo.png" alt="Vex 8 Unblocked - Latest platform game edition" />
-              <a href="/vex-8/index.html" class="play-button">Play Now</a>
+              <img src="/vex-8/logo.png" alt="Vex 8 Unblocked - Latest platform game edition" loading="lazy" />
+              <div class="play-button" onclick="openGameModal('/vex-8/index.html', 'Vex 8 Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Vex 8 Unblocked</h3>
@@ -422,8 +417,8 @@
           <!-- Game Card 19 -->
           <div class="game-card">
             <div class="game-preview">
-              <img src="/vex-x3m/logo.png" alt="Vex X3M Unblocked - Extreme platform game" />
-              <a href="/vex-x3m/index.html" class="play-button">Play Now</a>
+              <img src="/vex-x3m/logo.png" alt="Vex X3M Unblocked - Extreme platform game" loading="lazy" />
+              <div class="play-button" onclick="openGameModal('/vex-x3m/index.html', 'Vex X3M Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Vex X3M Unblocked</h3>
@@ -436,10 +431,9 @@
               <img
                 src="/rocket-soccer/logo.jpg"
                 alt="Rocket Soccer Unblocked - Rocket-powered soccer game"
+                loading="lazy"
               />
-              <a href="/rocket-soccer/index.html" class="play-button"
-                >Play Now</a
-              >
+              <div class="play-button" onclick="openGameModal('/rocket-soccer/index.html', 'Rocket Soccer Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
               <h3>Rocket Soccer Unblocked</h3>
@@ -462,5 +456,27 @@
         <div class="copyright">© 2024 OVO Unblocked. All rights reserved.</div>
       </div>
     </footer>
+
+    <!-- Game Modal -->
+    <div id="gameModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="gameModalTitle" class="modal-title">Play Game</h2>
+          <div class="modal-buttons">
+            <button id="fullscreenBtn" class="modal-btn fullscreen-btn" onclick="toggleFullscreen()">
+              🔲 Fullscreen
+            </button>
+            <button class="modal-btn close-btn" onclick="closeGameModal()">
+              ❌ Close
+            </button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <iframe id="gameFrame" class="game-iframe" src="" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/gameModal.js" defer></script>
   </body>
 </html>
