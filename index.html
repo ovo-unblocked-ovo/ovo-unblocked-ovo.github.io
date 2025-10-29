@@ -26,8 +26,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" /></noscript>
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css" />
+    <!-- CSS - Optimized -->
+    <link rel="stylesheet" href="/css/style.css" media="all" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -109,7 +109,7 @@
   <body>
     <div class="main-container">
       <div class="glowing-overlay"></div>
-      <div class="content">
+      <main class="content">
         <header class="header">
           <h1 class="title">
             <a href="/" class="home-link">OvO Unblocked</a>
@@ -166,17 +166,20 @@
           <!-- Thêm phần video -->
           <div class="video-container">
             <h3>OvO Gameplay</h3>
+            <div class="video-wrapper">
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/be6WjzMX258?si=01TWxAR6v_1GABOH&loading=lazy"
+                data-src="https://www.youtube.com/embed/be6WjzMX258?si=01TWxAR6v_1GABOH&autoplay=0&mute=1"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
-              loading="lazy"
+                loading="lazy"
+                id="youtubeIframe"
             ></iframe>
+            </div>
           </div>
 
           <!-- Thêm phần related keywords -->
@@ -444,7 +447,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
 
     <footer class="footer">
@@ -480,6 +483,7 @@
       </div>
     </div>
 
+    <script src="/js/lazyVideo.js" defer></script>
     <script src="/js/gameModal.js" defer></script>
   </body>
 </html>

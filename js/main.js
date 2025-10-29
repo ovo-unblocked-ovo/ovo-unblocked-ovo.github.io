@@ -1,5 +1,11 @@
-// Optimized Google Analytics
-(function() {
+// Optimized Google Analytics - Load after page is interactive
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(loadGA);
+} else {
+  setTimeout(loadGA, 2000);
+}
+
+function loadGA() {
   var ga_id = 'G-P4EX4ZRLS2';
   var script = document.createElement('script');
   script.async = true;
@@ -14,4 +20,4 @@
     'page_path': window.location.pathname,
     'transport_type': 'beacon'
   });
-})();
+}
