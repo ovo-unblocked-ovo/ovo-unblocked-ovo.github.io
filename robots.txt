@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+Allow: /ovo/
+Allow: /ovo2/
+Allow: /archery-ragdoll/
+Allow: /car-fighter/
+Allow: /crazy-van/
+Allow: /football-penalty/
+Allow: /friday-night-funki-big-brother/
+Allow: /friday-night-funkin-hugie-wugie/
+Allow: /giant-rush/
+Allow: /grow-wars.io/
+Allow: /motor-tour/
+Allow: /sprunki/
+Allow: /sprunki-challenge/
+Allow: /sprunki-find-the-differences/
+Allow: /super-sprunki-clicker/
+Allow: /tug-of-heads/
+Allow: /vex-7/
+Allow: /vex-8/
+Allow: /vex-x3m/
+Allow: /rocket-soccer/
+
+# Sitemap
+Sitemap: https://ovo-unblocked-ovo.github.io/sitemap.xml
