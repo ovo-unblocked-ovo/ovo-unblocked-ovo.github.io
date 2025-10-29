@@ -16,9 +16,15 @@
     <link rel="alternate" type="application/rss+xml" title="OVO Unblocked RSS" href="/feed.xml" />
     
     <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://www.youtube.com" crossorigin />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    
+    <!-- Load Font - Optimized -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" /></noscript>
     
     <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css" />
@@ -97,11 +103,7 @@
       "contentUrl": "https://www.youtube.com/embed/be6WjzMX258"
     }
     </script>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-P4EX4ZRLS2"
-    ></script>
+    <!-- Google Analytics - Optimized -->
     <script src="/js/main.js" defer></script>
   </head>
   <body>
@@ -167,12 +169,13 @@
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/be6WjzMX258?si=01TWxAR6v_1GABOH"
+              src="https://www.youtube.com/embed/be6WjzMX258?si=01TWxAR6v_1GABOH&loading=lazy"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
+              loading="lazy"
             ></iframe>
           </div>
 
@@ -193,7 +196,7 @@
           <!-- Game Card 1 -->
           <article class="game-card" itemscope itemtype="https://schema.org/VideoGame">
             <div class="game-preview">
-              <img src="/ovo/images/icon-256.png" alt="OvO Unblocked - Play OvO game unblocked free online" loading="lazy" />
+              <img src="/ovo/images/icon-256.png" alt="OvO Unblocked - Play OvO game unblocked free online" loading="lazy" fetchpriority="high" />
               <div class="play-button" onclick="openGameModal('/ovo/index.html', 'OvO Unblocked')" style="cursor: pointer;" role="button" aria-label="Play OvO Unblocked">Play Now</div>
             </div>
             <div class="game-details">
@@ -206,7 +209,7 @@
           <!-- Game Card 2 -->
           <div class="game-card">
             <div class="game-preview">
-              <img src="/ovo2/logo.png" alt="OvO 2 Unblocked - Play OvO 2 game unblocked" loading="lazy" />
+              <img src="/ovo2/logo.png" alt="OvO 2 Unblocked - Play OvO 2 game unblocked" loading="lazy" decoding="async" />
               <div class="play-button" onclick="openGameModal('/ovo2/index.html', 'OvO 2 Unblocked')" style="cursor: pointer;">Play Now</div>
             </div>
             <div class="game-details">
